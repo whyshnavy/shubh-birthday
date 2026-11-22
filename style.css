@@ -1,0 +1,180 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #233d30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    color: #f5ead5;
+}
+
+.container {
+    width: 100%;
+    max-width: 580px;
+    min-height: 650px;
+    background: #e9ddc4;
+    color: #294334;
+    border-radius: 24px;
+    padding: 35px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 15px 45px #14251c80;
+    border: 5px solid #c2a77b;
+}
+
+.forest {
+    font-size: 30px;
+    letter-spacing: 8px;
+}
+
+.animals {
+    display: flex;
+    gap: 35px;
+    margin: 20px 0;
+}
+
+.animal {
+    font-size: 85px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.animal:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.small-heading {
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #8b704b;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(35px, 9vw, 48px);
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.intro {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 340px;
+    margin: 10px auto 25px;
+}
+
+.story-title {
+    font-size: clamp(30px, 8vw, 42px);
+}
+
+.message {
+    font-size: 17px;
+    line-height: 2;
+    max-width: 390px;
+    margin: 20px auto 38px;
+    color: #35513e;
+}
+
+.progress {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #947c56;
+    font-weight: 800;
+    margin: 0 0 15px;
+}
+
+button {
+    background: #355d43;
+    color: #fff5df;
+    border: none;
+    border-radius: 40px;
+    padding: 16px 30px;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #527858;
+    transform: scale(1.05);
+}
+
+.footer {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #8b704b;
+    margin-top: 25px;
+    max-width: 420px;
+    text-align: center;
+}
+
+.page-enter {
+    animation: appear 0.7s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        min-height: 650px;
+        padding: 28px 18px;
+    }
+
+    .animal {
+        font-size: 70px;
+    }
+
+    .message {
+        font-size: 16px;
+        margin-bottom: 38px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
